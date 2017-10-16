@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 
@@ -62,8 +63,8 @@ app.get('/bad', (req, res) => {
 });
 
 //http://192.168.1.100:3000 - to see on phone
-app.listen(3000, () => {
-    console.log('server is up on port 3000')
+app.listen(port, () => {
+    console.log(`server is up on port ${port}`);
 });
 
 ////from www.stackoverflow.com/questions/30712141/connect-to-localhost3000-from-another-computer-expressjs-nodejs
