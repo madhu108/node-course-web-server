@@ -41,11 +41,17 @@ app.get('/', (req, res) => {
         pageTitle: 'Home page',
         welcomeMessage: 'hare Krishna to everyone hariboooool'
     });
-
+    
 });
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
         pageTitle: 'About page'
+    });
+});
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'Projects page'
     });
 });
 
@@ -62,10 +68,12 @@ app.get('/bad', (req, res) => {
     });
 });
 
-//http://192.168.1.100:3000 - to see on phone
+
+//http://192.168.1.100:3000 - to see from other device
 app.listen(port, () => {
     console.log(`server is up on port ${port}`);
 });
+
 
 ////from www.stackoverflow.com/questions/30712141/connect-to-localhost3000-from-another-computer-expressjs-nodejs
 //app.listen(3000, '0.0.0.0', function() {
